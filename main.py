@@ -87,15 +87,13 @@ class InstagramBot():
                 like_button = self.browser.find_element_by_xpath(like_xpath)    
                 like_button.click()
             except:
-                next_button = list(filter(lambda x: x.text == 'Next', self.browser.find_elements_by_css_selector('a')))[0]
-                next_button.click()
-            	continue
+               pass
             time.sleep(interval)
             try:
                 next_button = list(filter(lambda x: x.text == 'Next', self.browser.find_elements_by_css_selector('a')))[0]
                 next_button.click()
             except:
-            	continue
+                    continue
             time.sleep(interval)
 
 
